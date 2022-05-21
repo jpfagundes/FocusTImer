@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+  display: flex; 
+  flex: 1;
+  align-items: center;
+  min-height: 100vh;
+  
+}
+
+
+
+button {
+  background-color: transparent;
+  border: none;
+  
+  cursor: pointer;
+}
+
+
+.hide {
+  display: none;
+}
+
+
+.content-timer button svg {
+
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+
+.cards{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 32px;
+}
+
+main {
+  display: flex; 
+  flex: 1;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+#timer {
+  font-size: 12.8rem;
+
+  display: flex;
+}
+
+#controls {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+
+
+}
+
+
+.buttonSounds{
+  height: 15.2rem;
+  width: 13.8rem;
+  background-color: #E1E1E6;
+  border-radius: 24px;
+}
+
+.buttonSoundsActive, .buttonSoundsActive svg path {
+  background-color: #02799D;
+  fill: #FFFFFF;
+  transition: 0.2s;
+}
