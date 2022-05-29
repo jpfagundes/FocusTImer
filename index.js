@@ -6,10 +6,14 @@ const buttonMinus = document.querySelector('.minus')
 
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
+
 const buttonTree = document.querySelector('.tree')
 const buttonCloud = document.querySelector('.cloud')
 const buttonCoffe = document.querySelector('.coffee')
 const buttonFirePlace = document.querySelector('.fireplace')
+
+const buttonLight = document.querySelector('.light')
+const buttonDark = document.querySelector('.dark')
 
 const buttonSoundTree = new Audio("./assets/Floresta.wav")
 const buttonSoundCloud = new Audio("./assets/Chuva.wav")
@@ -146,4 +150,17 @@ buttonFirePlace.addEventListener('click',function(){
   buttonCoffe.classList.remove('buttonSoundsActive')
   buttonFirePlace.classList.add('buttonSoundsActive')
   playSounds(buttonSoundFirePlace)
+})
+
+buttonLight.addEventListener('click', function(){
+  buttonLight.classList.add('hide')
+  buttonDark.classList.remove('hide')
+  document.body.classList.add('dark-theme')
+
+})
+
+buttonDark.addEventListener('click',function() {
+  buttonLight.classList.remove('hide')
+  buttonDark.classList.add('hide')
+  document.body.classList.remove('dark-theme')
 })

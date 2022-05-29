@@ -8,20 +8,6 @@
   font-size: 62.5%;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 .hide {
   display: none;
 }
@@ -36,21 +22,42 @@ button {
   gap: 32px;
 }
 
+nav{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
 main {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: space-evenly;
   padding-top: 20rem;
-  
 }
 
-#timer {
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: 0.5s;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.timer {
   font-size: 12.8rem;
   display: flex;
 }
 
-#controls {
+.controls {
   display: flex;
   align-items: center;
   justify-content: space-between
@@ -64,10 +71,15 @@ main {
   border-radius: 2.4rem;
 }
 
+.buttonSounds svg path{
+  fill: black;
+}
+
 .buttonSoundsActive, .buttonSoundsActive svg path {
   background-color: #02799D;
   fill: #FFFFFF;
-  transition: 0.2s;
+  transition: 0.5s;
+  
 }
 
 footer{
@@ -75,11 +87,89 @@ footer{
   text-align: center;
 }
 
-a{
-  text-decoration: none;
-  color: black;
+a:hover{
+  text-decoration: underline;
 }
 
-a:hover{
+a{
+  text-decoration: none;
   color: #02799D;
+}
+
+.controls svg:hover path{
+  fill: #02799D;
+}
+
+.cards button:hover{
+  background-color: #02799D;
+  transition: 0.5s;
+}
+
+.cards button:hover svg path{
+  fill: #fff;
+  transition: 0.5s;
+}
+
+.dark-theme{
+  background: #000000;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+
+.dark-theme .buttonSounds, .dark-theme .buttonSounds svg path{
+  background-color: #29292e;
+  fill: #FFFFFF;
+  transition: 0.5s;
+}
+
+.dark-theme .buttonSoundsActive, .buttonSoundsActive svg path{
+  background-color: #02799D;
+}
+
+.dark-theme .content-timer svg path{
+  fill: #ffffff;
+}
+
+.dark-theme .controls svg:hover path{
+  fill: #02799D;
+}
+
+@media (max-width: 700px) {
+
+  nav {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  main {
+    padding-top: 10rem;
+    gap: 5rem;
+    display: block;
+  }
+
+  .timer{
+    justify-content: center;
+  }
+
+  .controls{
+    padding: 2rem 0 2rem 0;
+    justify-content: center;
+  }
+
+  .cards{
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    'A B'
+    'C D';
+    gap: 2rem;
+    max-width: 32rem;
+  }
+
+  footer{
+    padding-top: 5rem;
+  }
+
+  
 }
