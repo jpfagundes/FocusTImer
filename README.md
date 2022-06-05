@@ -60,6 +60,9 @@ nesse projeto, com as aulas:
 
  <br />
 
+ <p>Gif do Projeto Mobile</p>
+<img alt="Gif do projeto  mobile Focus Timer" title="gif" src="./images/focus-timer-mobile.gif" />
+
 ## 🧪 Tecnologias
 
 Aplicação desenvolvida usando as seguintes tecnologias:
